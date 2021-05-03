@@ -30,7 +30,7 @@ $(enterLocation);
 // weather bar
 const WEATHER_SEARCH_URL = "https://api.openweathermap.org/data/2.5/weather?id=524901&APPID=d86b9843fdc4941e520f985922146256"
 
-//press on submit button and scroll to results
+//submit button
 function scrollPageTo(myTarget, topPadding) {
     if (topPadding == undefined) {
         topPadding = 0;
@@ -40,7 +40,7 @@ function scrollPageTo(myTarget, topPadding) {
         scrollTop: moveTo
     }, 200);
 }
-
+//weather display
 function displayWeather(data) {
     return `
     <div class="weather-results">
@@ -55,7 +55,7 @@ function displayWeather(data) {
 `;
 }
 
-//retrieve data from OpenWeather API
+//data from Weather API
 function getWeatherData() {
     let city = $('.search-query').val();
     $.ajax(WEATHER_SEARCH_URL, {

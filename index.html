@@ -13,11 +13,8 @@
 <body>
 
 <div role=main>
-    <div>
-        <form>
-            <button type="submit" class="submit-button">Clear</button>
-        </form>
-    </div>
+
+<!-- search box -->
     <div class="start-display" id="start-page">
         <header class="row" role="banner">
             <h1 class="logo">Trip Planner</h1>
@@ -28,12 +25,19 @@
             <button type="submit" class="submit-button">Search</button>
         </form>
     </div>
+    <!-- weather output -->
     <section class="weather row" id="weather-display">
         <div class="weather-results">
             <h1><strong>Current Weather for 
         </div>
     </section>
 </div>
+<!-- clear button -->
+    <div>
+        <form>
+            <button type="submit" class="submit-button">Clear</button>
+        </form>
+    </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="main.js"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDYwwQ-wTWZ6jI75jcsRz4if7dv30i5evo&libraries=places&callback=activatePlacesSearch"></script>
