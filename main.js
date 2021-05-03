@@ -28,6 +28,18 @@ function activatePlacesSearch() {
 $(enterLocation);
 
 // weather bar
+const WEATHER_SEARCH_URL = "https://api.openweathermap.org/data/2.5/weather?id=524901&APPID=d86b9843fdc4941e520f985922146256"
+
+//press on submit button and scroll to results
+function scrollPageTo(myTarget, topPadding) {
+    if (topPadding == undefined) {
+        topPadding = 0;
+    }
+    var moveTo = $(myTarget).offset().top - topPadding;
+    $('html, body').stop().animate({
+        scrollTop: moveTo
+    }, 200);
+}
 
 function displayWeather(data) {
     return `
@@ -41,4 +53,22 @@ function displayWeather(data) {
         <p>Humidity:</p><p> ${data.main.humidity} &#37;</p>
     </div>
 `;
+}
+
+//retrieve data from OpenWeather API
+function getWeatherData() {
+    let city = $('.search-query').val();
+    $.ajax(WEATHER_SEARCH_URL, {
+        data: {
+            units: 'imperial',
+            q: city
+        },
+        dataType: 'jsonp',
+        type: 'GET',
+        success: function (data) {
+            let widget = displayWeather(data);
+            $('#weather-display').html(widget);
+            scrollPageTo('#weather-display', 15);
+        }
+    });
 }
