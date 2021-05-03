@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: url("./images/map.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0px;
+    padding: 0px;
+}
