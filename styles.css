@@ -27,3 +27,65 @@ header {
     border-radius: 10px;
     width: 80%
 }
+
+.start-display {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-shadow: 0 0 10px black;
+    padding-top: 200px;
+    margin-bottom: 45px;
+}
+
+form input {
+    height: 50px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+form button {
+    height: 50px;
+    width: 100px;
+    background: #eee;
+    border: 0px;
+    border-radius: 5px;
+    margin-left: 10px;
+    box-shadow: 0 0 5px black;
+    font-size: 20px;
+}
+
+form a {
+    color: black;
+    text-decoration: none;
+}
+
+
+/***** WEATHER DISPLAY *****/
+
+.weather-results {
+    padding: 10px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.weather-results h1 {
+    font-size: 40px;
+    color: black;
+    font-family: sans-serif;
+}
+
+.weather-image {
+    width: 50%;
+}
+
+.weather-results {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    background: rgba(230, 223, 223, 0.7);
+    border-radius: 5px;
+}
+
